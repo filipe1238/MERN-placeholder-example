@@ -49,7 +49,7 @@ export default function Create() {
          <input
            type="text"
            className="form-control"
-           id="namee"
+           id="name"
            value={form.name}
            onChange={(e) => updateForm({ name: e.target.value })}
          />
