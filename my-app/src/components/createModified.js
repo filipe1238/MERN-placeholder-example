@@ -4,9 +4,7 @@ import { useNavigate } from "react-router";
 export default function CreateModified() {
     const [form, setForm] = useState({
         email: "",
-        password: ""
-    });
-    const [passwordCheck, setPasswordCheck] = useState({
+        password: "",
         passwordCheck: ""
     });
 
@@ -17,12 +15,6 @@ export default function CreateModified() {
             return { ...prev, ...value };
         });
     }
-    function checkPassword(value) {
-        return setPasswordCheck({
-            passwordCheck: value
-        });
-    }
-
     async function onSubmit(e) {
         e.preventDefault();
 
@@ -50,7 +42,7 @@ export default function CreateModified() {
     }
 
     async function validPassword() {
-        if (passwordCheck.passwordCheck.password !== form.password) return false
+        if (form.passwordCheck !== form.password) return false
         else return true
 
     }
@@ -91,7 +83,7 @@ export default function CreateModified() {
                         placeholder="Password"
                         id="passwordCheck"
                         // value={form.password}
-                        onChange={(e) => checkPassword({ password: e.target.value })}
+                        onChange={(e) => updateForm({ passwordCheck: e.target.value })}
                     />
                     <label htmlFor="password">Confirm Password</label>
                 </div>
