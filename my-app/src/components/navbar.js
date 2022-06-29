@@ -34,7 +34,7 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link active" to="/create">
+                <NavLink className="nav-link" to="/create">
                   Create Record
                 </NavLink>
               </li>
@@ -42,6 +42,12 @@ export default function Navbar() {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/createModified">
                   Create Record Mod
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/study">
+                  Study
                 </NavLink>
               </li>
 
